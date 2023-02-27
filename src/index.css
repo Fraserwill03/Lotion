@@ -99,15 +99,17 @@ header {
 }
 
 .menu h1 {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bolder;
-  padding: 14px;
+  padding-left: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .add-note-button {
-  width: 64px;
+  width: 58px;
   height: 100%;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bolder;
   text-align: center;
   display: flex;
