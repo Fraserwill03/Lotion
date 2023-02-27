@@ -1,8 +1,16 @@
-function Header() {
+import PropTypes from 'prop-types';
+import Button from './Button';
+
+function Header( { toggleMenu } ) {
+
     return (
         <header>
             <div className='button-container'>
-                <div className='menu-button'>&#9776;</div>
+                <Button
+                    type='menu-button'
+                    text='&#9776;'
+                    onClick={toggleMenu}
+                />
             </div>
             <div className='page-title'>
                 <h1>Lotion</h1>
