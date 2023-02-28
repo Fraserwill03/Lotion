@@ -1,18 +1,22 @@
 import { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
+import View from "./components/View";
+import Editor from "./components/Editor";
 
 
 function App() {
-  return (
-  <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Layout />}>
 
+  return (
+  <BrowserRouter basename='/notes'>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path='/' element={<div className='empty-content'>Select a note, or create a new one.</div>}></Route>
+          <Route path='/:id' element={<View/>}></Route>
+          <Route path='/:id/edit' element={<Editor />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>
-  // <Layout />
   );
 }
 

@@ -1,0 +1,37 @@
+.note {
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 1px lightgrey;
+    max-height: 86px;
+}
+
+.note-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-weight: bolder;
+}
+
+.note-body {
+    padding:10px;
+    font-size: 12px;
+    text-overflow: ellipsis;
+}
+
+.note:hover {
+    background-color: #957DAD;
+    color: white;
+}
+
+.note .active {
+    background-color: #957DAD;
+    color: white;
+}
+
+.note-date {
+    color: grey;
+    font-size: 10px;
+    padding-left: 10px;
+}
+
+

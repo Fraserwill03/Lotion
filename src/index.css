@@ -83,42 +83,18 @@ header {
   min-height: 100%;
 }
 
-.menu {
-  min-height: 100%;
+.content {
   display: flex;
   flex-direction: column;
-  width: 250px;
-  border-right: solid 1px lightgrey;
+  flex-grow: 1;
 }
 
-.menu-header {
+.empty-content {
+  min-height: 100%;
+  min-width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  border-bottom: solid 1px lightgrey;
-}
-
-.menu h1 {
-  font-size: 22px;
-  font-weight: bolder;
-  padding-left: 14px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.add-note-button {
-  width: 58px;
-  height: 100%;
-  font-size: 22px;
-  font-weight: bolder;
-  text-align: center;
-  display: flex;
   justify-content: center;
-  align-items: center;
+  font-size: 28px;
+  color: grey;
 }
-
-.add-note-button:hover {
-  background-color: #957DAD;
-  color: white;
-}
-
