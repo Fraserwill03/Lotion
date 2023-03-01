@@ -1,7 +1,10 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 import './note.css'
 
-function Note({ current, title, date, body, index, selectNote }) {
+function Note({ title, date, body, index, selectNote }) {
+  const { current } = useParams()
+  
   return (
     <div className={'note' + (current === index ? ' active' : '')}
     onClick={ selectNote }>

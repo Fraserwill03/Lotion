@@ -11,7 +11,6 @@ function Layout() {
     })
     const [toggleMenu, setToggleMenu] = useState(true)
     const [notes, setNotes] = useState([])
-    const [currentIndex, setCurrentIndex] = useState(undefined)
     const navigate = useNavigate();
     const { index } = useParams();
 
@@ -23,12 +22,12 @@ function Layout() {
         <div className="main-section">
             {toggleMenu && <Menu 
             addNote={() => 
-                (setNotes([...notes, {id: uuidv4(), title: 'Untitled', date: '', body: '', index: notes.length + 1}]),
-                navigate(`/${notes.length + 1}/edit`), currentIndex = setCurrentIndex(index))
+                (setNotes([...notes, {id: uuidv4(), title: 'Untitled', date: '123', body: '', index: notes.length + 1}]),
+                    navigate(`/${notes.length + 1}/edit`))
             }
             notes={notes}/>}
         <div className='content'>
-            {index === undefined ? <Outlet /> : <Outlet context={[notes]}/>}
+            {index === undefined ? <Outlet /> : <Outlet context={notes[parseInt(index) - 1]}/>}
         </div>
         </div>
     </div>
