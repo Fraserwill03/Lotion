@@ -4,7 +4,7 @@ import Button from './Button'
 import Note from './Note'
 import './menu.css'
 
-function Menu( { addNote, notes } ) {
+function Menu( { addNote, notes, current } ) {
   const navigate = useNavigate();
   function formatDate(inputDate) {
     
@@ -22,6 +22,7 @@ function Menu( { addNote, notes } ) {
         <div className='menu-body'>
             {notes.length > 0 ? (notes.map((note) => {
               return (<Note 
+              current={current}
               title={note.title}
               body={note.body}
               date={note.date.toString()}

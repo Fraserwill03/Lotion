@@ -1,10 +1,9 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import './note.css'
 
-function Note({ id, title, date, body, index, selectNote }) {
+function Note({ current, title, date, body, index, selectNote }) {
   return (
-    <div className='note'
+    <div className={'note' + (current === index ? ' active' : '')}
     onClick={ selectNote }>
         <div className='note-header'>{title}</div>
         <div className='note-date'>{date}</div>

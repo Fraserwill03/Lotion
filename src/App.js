@@ -12,8 +12,8 @@ function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route path='/' element={<div className='empty-content'>Select a note, or create a new one.</div>}></Route>
-          <Route path='/:id' element={<View/>}></Route>
-          <Route path='/:id/edit' element={<Editor />}></Route>
+          <Route path='/:index' element={<View/>}></Route>
+          <Route path='/:index/edit' element={<Editor />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>
