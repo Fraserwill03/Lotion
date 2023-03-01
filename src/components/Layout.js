@@ -9,6 +9,17 @@ function Layout() {
     useEffect(() => {
         
     })
+
+    function formatDate(date) {
+        const day = date.getDate()
+        const month = date.getMonth() + 1
+        const year = date.getFullYear()
+        const hours = date.getHours()
+        const minutes = date.getMinutes()
+        const seconds = date.getSeconds()
+        return `${year}-${month < 10 ? '0' : ''}${month}-${day < 10 ? '0' : ''}${day}T${hours}:${minutes}:${seconds}`
+    }
+
     const [toggleMenu, setToggleMenu] = useState(true)
     const [notes, setNotes] = useState([])
     const navigate = useNavigate();
@@ -22,7 +33,7 @@ function Layout() {
         <div className="main-section">
             {toggleMenu && <Menu 
             addNote={() => 
-                (setNotes([...notes, {id: uuidv4(), title: 'Untitled', date: '123', body: '', index: notes.length + 1}]),
+                (setNotes([...notes, {id: uuidv4(), title: 'Untitled', date: formatDate(new Date), body: '', index: notes.length + 1}]),
                     navigate(`/${notes.length + 1}/edit`))
             }
             notes={notes}/>}

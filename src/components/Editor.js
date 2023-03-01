@@ -7,11 +7,28 @@ import './editor.css'
 
 function Editor() {
   const note = useOutletContext();  
+  const [title, setTitle] = React.useState(note.title)
 
   return (
     <div className='editor'>
       <div className='editor-header'>
-        <p>{note.title}</p>
+        <div className='title-date'>
+        <input
+          className='title-input'
+          type='text'
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
+        {console.log(note.date)}
+        <input
+          className='date-input'
+          type='datetime-local'
+          value={note.date}
+          onChange={(e) => note.date = e.target.value}
+        />
+        </div>
+        <div className='buttons'>
+        </div>
         {/* <p>{date}</p> */}
       </div>
       <div className='editor-body'>

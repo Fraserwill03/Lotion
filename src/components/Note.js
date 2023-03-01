@@ -9,7 +9,7 @@ function Note({ title, date, body, index, selectNote }) {
     <div className={'note' + (current === index ? ' active' : '')}
     onClick={ selectNote }>
         <div className='note-header'>{title}</div>
-        <div className='note-date'>{date}</div>
+        <div className='note-date'></div>
         <div className='note-body'>{body === '' ? '...' : body}</div>
     </div>
   )

@@ -1,0 +1,40 @@
+.editor {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    width: 100%;
+}
+
+.editor-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px lightgrey;
+}
+
+.title-date {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.title-input {
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+
+.date-input {
+    font-size: 14px;
+    color: grey;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border: none;
+    outline: none;
+    width: 210px;
+}
+
+.buttons {
+
+}
