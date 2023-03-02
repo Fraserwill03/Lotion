@@ -12,6 +12,20 @@
     justify-content: space-between;
     border-bottom: solid 1px lightgrey;
   }
+
+  .menu-button {
+    height: 100%;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+  }
+  
+  .menu-button:hover {
+    background-color: #957DAD;
+    color: white;
+  }
   
   .menu h1 {
     font-size: 22px;
