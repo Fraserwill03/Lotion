@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactQuill from 'react-quill'
-import { useOutletContext, useParams } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
+import { useOutletContext, useParams, useNavigate } from 'react-router-dom'
 import Button from './Button'
 import 'react-quill/dist/quill.snow.css'
 import './editor.css'
@@ -12,9 +12,9 @@ function Editor() {
   const [notes, setNotes] = useOutletContext();
   const { index } = useParams();
   const note = notes[parseInt(index) - 1]  
-  const [title, setTitle] = React.useState(note.title)
-  const [body, setBody] = React.useState(note.body)
-  const [date, setDate] = React.useState(note.date)
+  const [title, setTitle] = useState(note.title)
+  const [body, setBody] = useState(note.body)
+  const [date, setDate] = useState(note.date)
   
   const navigate = useNavigate()
 
@@ -65,13 +65,14 @@ function Editor() {
 
         </div>
       </div>
-      {/* <div className='editor-body'> */}
+      <div className='editor-body'>
         <ReactQuill
+          className='quill'
           theme='snow'
           value={body}
           onChange={(e) => setBody(e)}
         />
-        {/* </div> */}
+        </div>
     </div>
   )
 }

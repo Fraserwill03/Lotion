@@ -1,8 +1,8 @@
 .editor {
     display: flex;
     flex-direction: column;
-    min-height: 100%;
-    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .editor-header {
@@ -65,4 +65,22 @@
     background-color: #957DAD;
     color: white;
     cursor: pointer;
+}
+
+.editor-body {
+    flex: 1;
+    max-width: 100%;
+    display: flex;
+}
+
+.quill {
+    flex: 1;
+    max-width: 100%;
+}
+
+.ql-container.ql-snow {
+    border: none;
+    overflow-y: auto;
+    max-width: 100%;
+    width: 100%;
 }
