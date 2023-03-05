@@ -20,7 +20,7 @@ function Note({ title, date, body, index, selectNote }) {
     <div className={'note' + (current === index ? ' active' : '')}
     onClick={ selectNote }>
         <div className='note-header'>{title}</div>
-        <div className='note-date'>{formatDateNote(date)}</div>
+        <div className='note-date'>{date[1] === true ? formatDateNote(date[0]) : ''}</div>
         {body === '' ? <div className='note-body'>...</div> : <div className='note-body' dangerouslySetInnerHTML={{__html: body}}></div>}
     </div>
   )

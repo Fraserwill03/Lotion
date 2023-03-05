@@ -33,7 +33,7 @@ function View() {
       <div className='view-header'>
         <div className='title-date'>
           <h1>{note.title}</h1>
-          <div className='date'>{formatDateView(note.date)}</div>
+          <div className='date'>{formatDateView(note.date[0])}</div>
         </div>
         <div className='view-buttons'>
           <Button

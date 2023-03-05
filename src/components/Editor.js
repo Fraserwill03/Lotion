@@ -14,7 +14,7 @@ function Editor() {
   const note = notes[parseInt(index) - 1]  
   const [title, setTitle] = useState(note.title)
   const [body, setBody] = useState(note.body)
-  const [date, setDate] = useState(note.date)
+  const [date, setDate] = useState(note.date[0])
   
   const navigate = useNavigate()
 
@@ -35,7 +35,7 @@ function Editor() {
         <input
           className='date-input'
           type='datetime-local'
-          value={note.date}
+          value={note.date[0]}
           onChange={(e) => setDate(e.target.value)}
         />
         </div>
@@ -46,7 +46,8 @@ function Editor() {
             onClick={() => {
               note.title = title
               note.body = body
-              note.date = date
+              note.date[0] = date
+              note.date[1] = true
               navigate(`/${note.index}`)
             }} />
 
