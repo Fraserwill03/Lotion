@@ -1,6 +1,5 @@
 import React from 'react'
-import { useEffect } from 'react'
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Button from './Button'
 import Note from './Note'
 import './menu.css'

@@ -53,6 +53,7 @@ function Editor() {
               note.body = body
               note.date[0] = date
               note.date[1] = true
+              localStorage.setItem("notes", JSON.stringify(notes))
               navigate(`/${note.index}`)
             }} />
 

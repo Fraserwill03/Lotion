@@ -32,6 +32,10 @@
     color: white;
 }
 
+.note:hover .note-date {
+    color: white;
+}
+
 .active {
     background-color: #957DAD;
     color: white;

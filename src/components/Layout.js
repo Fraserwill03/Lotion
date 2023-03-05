@@ -8,21 +8,14 @@ import './layout.css';
 
 function Layout() {
     const [toggleMenu, setToggleMenu] = useState(true)
-    const [notes, setNotes] = useState([])
+    const [notes, setNotes] = useState(localStorage.getItem("notes") ? JSON.parse(localStorage.getItem("notes")) : [])
     const navigate = useNavigate();
-    const { index } = useParams();
-    
-    //fetch notes from local storage
-    
+    const { index } = useParams();    
 
 
     useEffect(() => {
-        //save notes to local storage
-        localStorage.clear()
-        for(let i = 0; i < notes.length; i++) {
-            localStorage.setItem(notes[i].id, JSON.stringify(notes[i]))
-        }
-        console.log(localStorage.length)
+        //save/overwrite notes to local storage every time the notes state is updated
+        localStorage.setItem("notes", JSON.stringify(notes))
     }, [notes])
 
     function formatDateObject(date) {
