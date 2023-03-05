@@ -1,7 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import './note.css'
-//to fix date, make date prop an array or its own state and have the other value indicate whethere its been set or not then do {date[1]===true ? date[0] : ''}
+
 function Note({ title, date, body, index, selectNote }) {
   const { current } = useParams()
   
