@@ -7,9 +7,16 @@ import Menu from './Menu';
 import './layout.css';
 
 function Layout() {
+    const [toggleMenu, setToggleMenu] = useState(true)
+    const [notes, setNotes] = useState([])
+    const navigate = useNavigate();
+    const { index } = useParams();
+    
     useEffect(() => {
-        
-    })
+        //save notes to local storage
+        localStorage.setItem(notes.id, JSON.stringify(notes))
+
+    }, [notes])
 
     function formatDateObject(date) {
         const day = date.getDate()
@@ -22,11 +29,6 @@ function Layout() {
             `T${hours < 10 ? '0' : ''}${hours}:${minutes < 10 ? '0' : ''}${minutes}` +
             `:${seconds < 10 ? '0' : ''}${seconds}`
     }
-
-    const [toggleMenu, setToggleMenu] = useState(true)
-    const [notes, setNotes] = useState([])
-    const navigate = useNavigate();
-    const { index } = useParams();
 
     function addNote() {
         setNotes([...notes, {id: uuidv4(), title: 'Untitled', date: [formatDateObject(new Date()), false], body: '', index: notes.length + 1}])
@@ -43,7 +45,8 @@ function Layout() {
             addNote={() => 
                 addNote()
             }
-            notes={notes}/>}
+            notes={notes}
+            current={index}/>}
 
         {index === undefined ? <Outlet /> : <Outlet context={[notes, setNotes]}/>}
         

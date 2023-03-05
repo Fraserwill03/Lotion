@@ -1,10 +1,11 @@
 import React from 'react'
-import { useNavigate } from "react-router-dom";
+import { useEffect } from 'react'
+import { useNavigate, useParams } from "react-router-dom";
 import Button from './Button'
 import Note from './Note'
 import './menu.css'
 
-function Menu( { addNote, notes, formatDate } ) {
+function Menu( { addNote, notes, current} ) {
   const navigate = useNavigate();
 
   return (
@@ -19,12 +20,13 @@ function Menu( { addNote, notes, formatDate } ) {
         <div className='menu-body'>
             {notes.length > 0 ? (notes.map((note) => {
               return (<Note 
+              index={note.index}
               key={note.id}
               title={note.title}
               body={note.body}
               date={note.date}
+              current={parseInt(current)}
               selectNote={() => navigate(`/${note.index}`)}
-              formatDate={formatDate}
               />)
             })) : <p className='default-menu'>No notes yet</p>}
         </div>

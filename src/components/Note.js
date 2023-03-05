@@ -1,9 +1,7 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
 import './note.css'
 
-function Note({ title, date, body, index, selectNote }) {
-  const { current } = useParams()
+function Note({ title, date, body, index, selectNote, current }) {
   
   function formatDateNote(dateString) {
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
