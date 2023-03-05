@@ -12,10 +12,17 @@ function Layout() {
     const navigate = useNavigate();
     const { index } = useParams();
     
+    //fetch notes from local storage
+    
+
+
     useEffect(() => {
         //save notes to local storage
-        localStorage.setItem(notes.id, JSON.stringify(notes))
-
+        localStorage.clear()
+        for(let i = 0; i < notes.length; i++) {
+            localStorage.setItem(notes[i].id, JSON.stringify(notes[i]))
+        }
+        console.log(localStorage.length)
     }, [notes])
 
     function formatDateObject(date) {

@@ -14,6 +14,11 @@ function View() {
 
   function deleteNote() {
     setNotes(notes.filter((note) => note.index !== parseInt(index)))
+    for (let i = parseInt(index); i < notes.length; i++) {
+      if (notes[i].index > parseInt(index)) {
+        notes[i].index--
+      }
+    }
   }
   
   function formatDateView(dateString) {
