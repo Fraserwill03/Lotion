@@ -32,7 +32,6 @@ function Editor() {
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
-        {console.log(note.date)}
         <input
           className='date-input'
           type='datetime-local'

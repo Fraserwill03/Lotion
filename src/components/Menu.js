@@ -4,11 +4,8 @@ import Button from './Button'
 import Note from './Note'
 import './menu.css'
 
-function Menu( { addNote, notes } ) {
+function Menu( { addNote, notes, formatDate } ) {
   const navigate = useNavigate();
-  function formatDate(inputDate) {
-    
-  }
 
   return (
     <div className='menu'>
@@ -27,6 +24,7 @@ function Menu( { addNote, notes } ) {
               body={note.body}
               date={note.date}
               selectNote={() => navigate(`/${note.index}`)}
+              formatDate={formatDate}
               />)
             })) : <p className='default-menu'>No notes yet</p>}
         </div>

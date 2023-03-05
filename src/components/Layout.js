@@ -11,7 +11,7 @@ function Layout() {
         
     })
 
-    function formatDate(date) {
+    function formatDateObject(date) {
         const day = date.getDate()
         const month = date.getMonth() + 1
         const year = date.getFullYear()
@@ -29,7 +29,7 @@ function Layout() {
     const { index } = useParams();
 
     function addNote() {
-        setNotes([...notes, {id: uuidv4(), title: 'Untitled', date: formatDate(new Date()), body: '', index: notes.length + 1}])
+        setNotes([...notes, {id: uuidv4(), title: 'Untitled', date: formatDateObject(new Date()), body: '', index: notes.length + 1}])
         navigate(`/${notes.length + 1}/edit`)
     }
 
@@ -44,9 +44,9 @@ function Layout() {
                 addNote()
             }
             notes={notes}/>}
-        <div className='content'>
-            {index === undefined ? <Outlet /> : <Outlet context={[notes, setNotes]}/>}
-        </div>
+
+        {index === undefined ? <Outlet /> : <Outlet context={[notes, setNotes]}/>}
+        
         </div>
     </div>
   );

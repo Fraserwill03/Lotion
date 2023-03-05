@@ -1,4 +1,4 @@
-.editor {
+.view {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -6,7 +6,7 @@
     max-width: 100%;
 }
 
-.editor-header {
+.view-header {
     display: flex;
     justify-content: space-between;
     border-bottom: solid 1px lightgrey;
@@ -19,38 +19,35 @@
     height: 100%;
 }
 
-.title-input {
+.title-date h1 {
     font-size: 24px;
-    font-weight: bold;
-    border: none;
-    outline: none;
-    padding: 10px;
+    font-weight: bolder;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 5px;
 }
 
-.date-input {
+.date {
     font-size: 14px;
     color: grey;
     padding-left: 10px;
     padding-bottom: 10px;
-    border: none;
-    outline: none;
-    width: 210px;
 }
 
-.buttons {
+.view-buttons {
     display: flex;
     flex-direction: row;
     justify-content: right;
 }
 
-.save-button {
+.edit-button {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 60px;
 }
 
-.save-button:hover {
+.edit-button:hover {
     background-color: #957DAD;
     color: white;
     cursor: pointer;
@@ -69,16 +66,9 @@
     cursor: pointer;
 }
 
-.editor-body {
-    height: 100%;
-    width: 100%;
-    max-width: 100%;
+.view-body {
+
 }
 
-.quill {
-}
 
-.ql-container.ql-snow {
-    border: none;
-    overflow-y: auto;
-}
+

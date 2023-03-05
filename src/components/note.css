@@ -2,22 +2,29 @@
     display: flex;
     flex-direction: column;
     border-bottom: solid 1px lightgrey;
-    max-height: 86px;
+    height: 100px;
+    width: 250px;
 }
 
 .note-header {
-    display: flex;
-    align-items: center;
     padding: 10px;
     font-weight: bolder;
+    max-width: 230px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .note-body {
-    max-height: 100%;
-    max-width: 100%;
     padding:10px;
     font-size: 14px;
-    text-overflow: ellipsis;
+    max-height: 2.6em;
+    max-width: 230px;
+    word-wrap: break-word;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    text-overflow: ellipsis; /*fix*/
 }
 
 .note:hover {
