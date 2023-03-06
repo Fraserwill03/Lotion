@@ -72,6 +72,8 @@
 
 .ql-toolbar.ql-snow {
     border-top: none;
+    border-left: none;
+    border-right: none;
 }
 
 .ql-container.ql-snow {
