@@ -71,14 +71,13 @@ function Editor() {
 
         </div>
       </div>
-      <div className='editor-body'>
-        <ReactQuill
-          className='quill'
-          theme='snow'
-          value={body}
-          onChange={(e) => setBody(e)}
-        />
-        </div>
+      <ReactQuill
+        className='quill'
+        theme='snow'
+        value={body}
+        onChange={(e) => setBody(e)}
+        placeholder='Your note here...'
+      />
     </div>
   )
 }

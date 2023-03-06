@@ -1,8 +1,5 @@
 .editor {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
+    flex: 1;
     max-width: 100%;
 }
 
@@ -16,7 +13,6 @@
     display: flex;
     flex-grow: 1;
     flex-direction: column;
-    height: 100%;
 }
 
 .title-input {
@@ -69,16 +65,15 @@
     cursor: pointer;
 }
 
-.editor-body {
-    height: 100%;
-    width: 100%;
-    max-width: 100%;
+.quill {
+    height: calc(100% - 118px);
+    border: none;
 }
 
-.quill {
+.ql-toolbar.ql-snow {
+    border-top: none;
 }
 
 .ql-container.ql-snow {
     border: none;
-    overflow-y: auto;
 }

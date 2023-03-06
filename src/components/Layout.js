@@ -36,11 +36,11 @@ function Layout() {
     }
 
   return (
-    <div className="App">
+    <div className="layout">
         <Header 
             toggleMenu={() => setToggleMenu(!toggleMenu)}
         />
-        <div className="main-section">
+        <section className="main-section">
             {toggleMenu && <Menu 
             addNote={() => 
                 addNote()
@@ -50,7 +50,7 @@ function Layout() {
 
         {index === undefined ? <Outlet /> : <Outlet context={[notes, setNotes]}/>}
         
-        </div>
+        </section>
     </div>
   );
 }
