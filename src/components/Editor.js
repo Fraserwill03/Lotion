@@ -64,7 +64,7 @@ function Editor() {
                 const confirmation = window.confirm('Are you sure you want to delete this note?')
                 if (confirmation) { 
                   deleteNote()
-                  navigate(notes.length > 0 ? '/1' : '/')
+                  navigate(notes.length - 1 > 0 ? '/1' : '/')
                  }
                 else return
               }} />
