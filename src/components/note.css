@@ -2,13 +2,14 @@
     display: flex;
     flex-direction: column;
     border-bottom: solid 1px lightgrey;
-    height: 100px;
+    height: 110px;
     width: 250px;
 }
 
 .note-header {
     padding: 10px;
-    font-weight: bolder;
+    font-weight: bold;
+    font-size: 20px;
     max-width: 230px;
     overflow-y: hidden;
     overflow-x: hidden;
@@ -17,15 +18,17 @@
 }
 
 .note-body {
-    padding:10px;
     font-size: 14px;
-    max-height: 2.6em;
-    max-width: 230px;
-    word-wrap: break-word;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    text-overflow: ellipsis; /*fix*/
+    width: 230px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top: 10px;
 }
+
 
 .note:hover {
     background-color: #957DAD;
@@ -49,6 +52,7 @@
     color: grey;
     font-size: 10px;
     padding-left: 10px;
+    font-weight: bolder;
 }
 
 

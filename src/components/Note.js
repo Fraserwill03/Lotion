@@ -1,4 +1,5 @@
 import React from 'react'
+import 'react-quill/dist/quill.bubble.css'
 import './note.css'
 
 function Note({ title, date, body, index, selectNote, current }) {
