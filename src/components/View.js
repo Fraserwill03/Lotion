@@ -59,13 +59,12 @@ function View() {
             }} />
         </div>
       </div>
-      <div className='view-body'>
         <ReactQuill
+          className='viewer'
           theme='bubble'
           value={note.body}
           readOnly={true}
         />
-      </div>
     </div>
   )
 }
