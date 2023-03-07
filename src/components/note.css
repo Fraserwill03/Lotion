@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     border-bottom: solid 1px lightgrey;
-    height: 110px;
+    min-height: 90px;
     width: 250px;
 }
 
@@ -20,13 +20,7 @@
 .note-body {
     font-size: 14px;
     width: 230px;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    padding-left:10px;
-    padding-right:10px;
-    padding-top: 10px;
+    padding: 10px;
 }
 
 

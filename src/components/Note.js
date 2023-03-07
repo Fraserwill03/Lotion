@@ -13,14 +13,22 @@ function Note({ title, date, body, index, selectNote, current }) {
     const minutes = dateString.substring(14, 16);
     const time = hour > 12 ? `${hour - 12}:${minutes} PM` : `${hour}:${minutes} AM`
     return `${month} ${day}, ${year} at ${time}`
-}
+  }
+
+  function formatNoteBody(body) {
+    if (body.length > 60) {
+      return body.substring(0, 60) + '...'
+    }
+    else return body
+  }
   
   return (
     <div className={'note' + (current === index ? ' active' : '')}
     onClick={ selectNote }>
         <div className='note-header'>{title}</div>
         <div className='note-date'>{date[1] === true ? formatDateNote(date[0]) : ''}</div>
-        {body === '' ? <div className='note-body'>...</div> : <div className='note-body' dangerouslySetInnerHTML={{__html: body}}></div>}
+        {body === '' ? <div className='note-body'>...</div> : 
+          <div className='note-body' dangerouslySetInnerHTML={{__html: formatNoteBody(body)}}></div>}
     </div>
   )
 }
