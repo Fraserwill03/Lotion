@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactQuill from 'react-quill'
-import { useState } from 'react'
 import { useOutletContext, useParams, useNavigate } from 'react-router-dom'
 import Button from './Button'
 import 'react-quill/dist/quill.bubble.css';
