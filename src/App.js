@@ -10,14 +10,7 @@ function App() {
   <BrowserRouter>
         <Routes>
           <Route element={<Layout />}>
-            <Route path='/' element={<div className='empty-content'>Select a note, or create a new one.</div>}></Route>
-            <Route path='/:index' element={<View/>}></Route>
-            <Route path='/:index/edit' element={<Editor />}></Route>
-          </Route>
-        </Routes>
-        <Routes>
-          <Route element={<Layout />}>
-            <Route path='/notes/' element={<div className='empty-content'>Select a note, or create a new one.</div>}></Route>
+            <Route path='/notes' element={<div className='empty-content'>Select a note, or create a new one.</div>}></Route>
             <Route path='/notes/:index' element={<View/>}></Route>
             <Route path='/notes/:index/edit' element={<Editor />}></Route>
           </Route>

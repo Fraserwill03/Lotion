@@ -25,7 +25,7 @@ function Menu( { addNote, notes, current} ) {
               body={note.body}
               date={note.date}
               current={parseInt(current)}
-              selectNote={() => navigate(`/${note.index}`)}
+              selectNote={() => navigate(`/notes/${note.index}`)}
               />)
             })) : <p className='default-menu'>No notes yet</p>}
         </div>

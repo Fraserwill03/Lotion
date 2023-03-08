@@ -32,7 +32,7 @@ function Layout() {
 
     function addNote() {
         setNotes([...notes, {id: uuidv4(), title: 'Untitled', date: [formatDateObject(new Date()), false], body: '', index: notes.length + 1}])
-        navigate(`/${notes.length + 1}/edit`)
+        navigate(`/notes/${notes.length + 1}/edit`)
     }
 
   return (

@@ -54,7 +54,7 @@ function Editor() {
               note.date[0] = date
               note.date[1] = true
               localStorage.setItem("notes", JSON.stringify(notes))
-              navigate(`/${note.index}`)
+              navigate(`/notes/${note.index}`)
             }} />
 
             <Button
@@ -64,7 +64,7 @@ function Editor() {
                 const confirmation = window.confirm('Are you sure you want to delete this note?')
                 if (confirmation) { 
                   deleteNote()
-                  navigate(notes.length - 1 > 0 ? '/1' : '/')
+                  navigate(notes.length - 1 > 0 ? '/notes/1' : '/notes')
                  }
                 else return
               }} />

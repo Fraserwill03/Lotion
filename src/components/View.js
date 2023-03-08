@@ -43,7 +43,7 @@ function View() {
           <Button
             type='edit-button'
             text='Edit'
-            onClick={() => navigate(`/${index}/edit`)}
+            onClick={() => navigate(`/notes/${index}/edit`)}
           />
           <Button
             type='delete-button'
@@ -51,7 +51,7 @@ function View() {
             onClick={() => {
               const confirmation = window.confirm('Are you sure you want to delete this note?')
               if (confirmation) { 
-                navigate(notes.length -1 > 0 ? '/1' : '/')
+                navigate(notes.length -1 > 0 ? '/notes/1' : '/notes')
                 deleteNote()
                 }
               else return
