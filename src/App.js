@@ -8,18 +8,16 @@ function App() {
   
   return (
   <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Layout />}>
+        <Routes path='/' element={<Layout />}>
           <Route path='/' element={<div className='empty-content'>Select a note, or create a new one.</div>}></Route>
           <Route path='/:index' element={<View/>}></Route>
           <Route path='/:index/edit' element={<Editor />}></Route>
-        </Route>
-        <Route path='/notes' element={<Layout />}>
+        </Routes>
+        <Routes path='/notes' element={<Layout />}>
           <Route path='/' element={<div className='empty-content'>Select a note, or create a new one.</div>}></Route>
           <Route path='/:index' element={<View/>}></Route>
           <Route path='/:index/edit' element={<Editor />}></Route>
-        </Route>
-      </Routes>
+        </Routes>
     </BrowserRouter>
   );
 }
